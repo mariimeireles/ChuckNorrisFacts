@@ -14,6 +14,10 @@
 		4D61717220599F33008C8622 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D61717020599F33008C8622 /* LaunchScreen.storyboard */; };
 		4D61717D20599F33008C8622 /* ChuckNorrisFactsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D61717C20599F33008C8622 /* ChuckNorrisFactsTests.swift */; };
 		4D61718820599F33008C8622 /* ChuckNorrisFactsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D61718720599F33008C8622 /* ChuckNorrisFactsUITests.swift */; };
+		4D617199205AC366008C8622 /* Fact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D617198205AC366008C8622 /* Fact.swift */; };
+		4D61719C205AC4CA008C8622 /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D61719B205AC4CA008C8622 /* JSON.swift */; };
+		4D61719E205AC5FC008C8622 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D61719D205AC5FC008C8622 /* Category.swift */; };
+		4D6171A1205AC77C008C8622 /* FactWebServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6171A0205AC77C008C8622 /* FactWebServiceProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +51,10 @@
 		4D61718320599F33008C8622 /* ChuckNorrisFactsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChuckNorrisFactsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D61718720599F33008C8622 /* ChuckNorrisFactsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChuckNorrisFactsUITests.swift; sourceTree = "<group>"; };
 		4D61718920599F33008C8622 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4D617198205AC366008C8622 /* Fact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fact.swift; sourceTree = "<group>"; };
+		4D61719B205AC4CA008C8622 /* JSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
+		4D61719D205AC5FC008C8622 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		4D6171A0205AC77C008C8622 /* FactWebServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactWebServiceProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +105,12 @@
 		4D61716620599F33008C8622 /* ChuckNorrisFacts */ = {
 			isa = PBXGroup;
 			children = (
-				4D61716720599F33008C8622 /* AppDelegate.swift */,
+				4D617197205AC34B008C8622 /* ChuckFact */,
 				4D61716920599F33008C8622 /* ViewController.swift */,
 				4D61716B20599F33008C8622 /* Main.storyboard */,
-				4D61716E20599F33008C8622 /* Assets.xcassets */,
 				4D61717020599F33008C8622 /* LaunchScreen.storyboard */,
-				4D61717320599F33008C8622 /* Info.plist */,
+				4D617196205AC0FC008C8622 /* Resources */,
+				4D617195205AC0B7008C8622 /* Supporting Files */,
 			);
 			path = ChuckNorrisFacts;
 			sourceTree = "<group>";
@@ -123,6 +131,50 @@
 				4D61718920599F33008C8622 /* Info.plist */,
 			);
 			path = ChuckNorrisFactsUITests;
+			sourceTree = "<group>";
+		};
+		4D617195205AC0B7008C8622 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4D61716720599F33008C8622 /* AppDelegate.swift */,
+				4D61717320599F33008C8622 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4D617196205AC0FC008C8622 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4D61716E20599F33008C8622 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		4D617197205AC34B008C8622 /* ChuckFact */ = {
+			isa = PBXGroup;
+			children = (
+				4D61719F205AC73E008C8622 /* Web Service */,
+				4D61719A205AC376008C8622 /* Model */,
+			);
+			path = ChuckFact;
+			sourceTree = "<group>";
+		};
+		4D61719A205AC376008C8622 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4D617198205AC366008C8622 /* Fact.swift */,
+				4D61719D205AC5FC008C8622 /* Category.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4D61719F205AC73E008C8622 /* Web Service */ = {
+			isa = PBXGroup;
+			children = (
+				4D61719B205AC4CA008C8622 /* JSON.swift */,
+				4D6171A0205AC77C008C8622 /* FactWebServiceProtocol.swift */,
+			);
+			path = "Web Service";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,7 +312,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D61716A20599F33008C8622 /* ViewController.swift in Sources */,
+				4D61719E205AC5FC008C8622 /* Category.swift in Sources */,
+				4D617199205AC366008C8622 /* Fact.swift in Sources */,
 				4D61716820599F33008C8622 /* AppDelegate.swift in Sources */,
+				4D6171A1205AC77C008C8622 /* FactWebServiceProtocol.swift in Sources */,
+				4D61719C205AC4CA008C8622 /* JSON.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,7 +484,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GQU3QL4RG3;
-				INFOPLIST_FILE = ChuckNorrisFacts/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/ChuckNorrisFacts/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Stone.ChuckNorrisFacts;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -443,7 +499,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GQU3QL4RG3;
-				INFOPLIST_FILE = ChuckNorrisFacts/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/ChuckNorrisFacts/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Stone.ChuckNorrisFacts;
 				PRODUCT_NAME = "$(TARGET_NAME)";
