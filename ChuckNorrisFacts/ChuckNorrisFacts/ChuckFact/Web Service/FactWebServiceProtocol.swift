@@ -7,3 +7,10 @@
 //
 
 import Foundation
+import RxSwift
+
+protocol FactServiceProtocol: class {
+    
+    func getFacts(_ term: String) -> Observable<[Fact]>
+}
+

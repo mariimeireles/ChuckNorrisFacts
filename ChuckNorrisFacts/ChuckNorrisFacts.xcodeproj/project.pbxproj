@@ -18,6 +18,12 @@
 		4D61719C205AC4CA008C8622 /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D61719B205AC4CA008C8622 /* JSON.swift */; };
 		4D61719E205AC5FC008C8622 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D61719D205AC5FC008C8622 /* Category.swift */; };
 		4D6171A1205AC77C008C8622 /* FactWebServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6171A0205AC77C008C8622 /* FactWebServiceProtocol.swift */; };
+		4D6171A4205ACAF2008C8622 /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D6171A3205ACAF2008C8622 /* RxBlocking.framework */; };
+		4D6171A6205ACAF4008C8622 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D6171A5205ACAF4008C8622 /* RxCocoa.framework */; };
+		4D6171A8205ACAFC008C8622 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D6171A7205ACAFC008C8622 /* RxSwift.framework */; };
+		4D6171AA205ACB31008C8622 /* RxSwift.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4D6171A7205ACAFC008C8622 /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4D6171AB205ACB37008C8622 /* RxCocoa.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4D6171A5205ACAF4008C8622 /* RxCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4D6171AC205ACB3D008C8622 /* RxBlocking.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4D6171A3205ACAF2008C8622 /* RxBlocking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +43,21 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		4D6171A9205ACB1B008C8622 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				4D6171AC205ACB3D008C8622 /* RxBlocking.framework in CopyFiles */,
+				4D6171AB205ACB37008C8622 /* RxCocoa.framework in CopyFiles */,
+				4D6171AA205ACB31008C8622 /* RxSwift.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		4D61716420599F33008C8622 /* ChuckNorrisFacts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChuckNorrisFacts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D61716720599F33008C8622 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -55,6 +76,9 @@
 		4D61719B205AC4CA008C8622 /* JSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
 		4D61719D205AC5FC008C8622 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		4D6171A0205AC77C008C8622 /* FactWebServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactWebServiceProtocol.swift; sourceTree = "<group>"; };
+		4D6171A3205ACAF2008C8622 /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxBlocking.framework; path = Carthage/Build/iOS/RxBlocking.framework; sourceTree = "<group>"; };
+		4D6171A5205ACAF4008C8622 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
+		4D6171A7205ACAFC008C8622 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +86,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D6171A4205ACAF2008C8622 /* RxBlocking.framework in Frameworks */,
+				4D6171A6205ACAF4008C8622 /* RxCocoa.framework in Frameworks */,
+				4D6171A8205ACAFC008C8622 /* RxSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +116,7 @@
 				4D61717B20599F33008C8622 /* ChuckNorrisFactsTests */,
 				4D61718620599F33008C8622 /* ChuckNorrisFactsUITests */,
 				4D61716520599F33008C8622 /* Products */,
+				4D6171A2205ACAF1008C8622 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -177,6 +205,16 @@
 			path = "Web Service";
 			sourceTree = "<group>";
 		};
+		4D6171A2205ACAF1008C8622 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4D6171A7205ACAFC008C8622 /* RxSwift.framework */,
+				4D6171A5205ACAF4008C8622 /* RxCocoa.framework */,
+				4D6171A3205ACAF2008C8622 /* RxBlocking.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -187,6 +225,8 @@
 				4D61716020599F33008C8622 /* Sources */,
 				4D61716120599F33008C8622 /* Frameworks */,
 				4D61716220599F33008C8622 /* Resources */,
+				4D6171A9205ACB1B008C8622 /* CopyFiles */,
+				4D6171AD205ACB9B008C8622 /* Carthage Script */,
 			);
 			buildRules = (
 			);
@@ -305,6 +345,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4D6171AD205ACB9B008C8622 /* Carthage Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/RxBlocking.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
+			);
+			name = "Carthage Script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4D61716020599F33008C8622 /* Sources */ = {
@@ -484,6 +544,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GQU3QL4RG3;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/ChuckNorrisFacts/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Stone.ChuckNorrisFacts;
@@ -499,6 +563,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GQU3QL4RG3;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/ChuckNorrisFacts/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Stone.ChuckNorrisFacts;
