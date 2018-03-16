@@ -16,6 +16,7 @@ DerivedData/
 *.perspectivev3
 !default.perspectivev3
 xcuserdata/
+.DS_STORE
 
 ## Other
 *.moved-aside
@@ -49,10 +50,9 @@ playground.xcworkspace
 
 # Carthage
 #
-# Add this line if you want to avoid checking in source code from Carthage dependencies.
-# Carthage/Checkouts
-
 Carthage/Build
+Carthage/Checkouts
+Carthage/
 
 # fastlane
 #
