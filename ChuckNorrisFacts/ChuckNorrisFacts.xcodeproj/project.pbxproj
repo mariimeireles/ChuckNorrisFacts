@@ -16,6 +16,10 @@
 		495B0C5520654D740098213F /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 495B0C4820654C800098213F /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		495B0C5620654D770098213F /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 495B0C4620654C7A0098213F /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		49AF5E862065466D00B503CC /* FactModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AF5E852065466D00B503CC /* FactModel.swift */; };
+		49B04F4F20658843006CDCCA /* FactCategoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B04F4E20658843006CDCCA /* FactCategoryTests.swift */; };
+		49D1FD8C20655474003247A7 /* FactModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D1FD8B20655474003247A7 /* FactModelTests.swift */; };
+		49D1FD8F20657E02003247A7 /* FactMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D1FD8E20657E02003247A7 /* FactMapper.swift */; };
+		49D1FD9220657F9F003247A7 /* FactMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D1FD9120657F9F003247A7 /* FactMapperTests.swift */; };
 		4D61716820599F33008C8622 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D61716720599F33008C8622 /* AppDelegate.swift */; };
 		4D61716A20599F33008C8622 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D61716920599F33008C8622 /* ViewController.swift */; };
 		4D61716D20599F33008C8622 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D61716B20599F33008C8622 /* Main.storyboard */; };
@@ -86,6 +90,10 @@
 		495B0C4820654C800098213F /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		495B0C4D20654D050098213F /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		49AF5E852065466D00B503CC /* FactModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactModel.swift; sourceTree = "<group>"; };
+		49B04F4E20658843006CDCCA /* FactCategoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactCategoryTests.swift; sourceTree = "<group>"; };
+		49D1FD8B20655474003247A7 /* FactModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactModelTests.swift; sourceTree = "<group>"; };
+		49D1FD8E20657E02003247A7 /* FactMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactMapper.swift; sourceTree = "<group>"; };
+		49D1FD9120657F9F003247A7 /* FactMapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactMapperTests.swift; sourceTree = "<group>"; };
 		4D61716420599F33008C8622 /* ChuckNorrisFacts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChuckNorrisFacts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D61716720599F33008C8622 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4D61716920599F33008C8622 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -140,6 +148,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		495B0C5720654DE00098213F /* Fact */ = {
+			isa = PBXGroup;
+			children = (
+				49D1FD8B20655474003247A7 /* FactModelTests.swift */,
+				49B04F4E20658843006CDCCA /* FactCategoryTests.swift */,
+			);
+			path = Fact;
+			sourceTree = "<group>";
+		};
+		49D1FD8D20657DE9003247A7 /* Mapper */ = {
+			isa = PBXGroup;
+			children = (
+				49D1FD8E20657E02003247A7 /* FactMapper.swift */,
+			);
+			path = Mapper;
+			sourceTree = "<group>";
+		};
+		49D1FD9020657F8A003247A7 /* Mapper */ = {
+			isa = PBXGroup;
+			children = (
+				49D1FD9120657F9F003247A7 /* FactMapperTests.swift */,
+			);
+			path = Mapper;
+			sourceTree = "<group>";
+		};
 		4D61715B20599F33008C8622 = {
 			isa = PBXGroup;
 			children = (
@@ -177,6 +210,8 @@
 		4D61717B20599F33008C8622 /* ChuckNorrisFactsTests */ = {
 			isa = PBXGroup;
 			children = (
+				49D1FD9020657F8A003247A7 /* Mapper */,
+				495B0C5720654DE00098213F /* Fact */,
 				4D61717C20599F33008C8622 /* ChuckNorrisFactsTests.swift */,
 				4D61717E20599F33008C8622 /* Info.plist */,
 			);
@@ -212,8 +247,9 @@
 		4D617197205AC34B008C8622 /* ChuckFact */ = {
 			isa = PBXGroup;
 			children = (
-				4D61719F205AC73E008C8622 /* Web Service */,
+				49D1FD8D20657DE9003247A7 /* Mapper */,
 				4D61719A205AC376008C8622 /* Model */,
+				4D61719F205AC73E008C8622 /* Web Service */,
 			);
 			path = ChuckFact;
 			sourceTree = "<group>";
@@ -416,6 +452,7 @@
 				4D617199205AC366008C8622 /* Fact.swift in Sources */,
 				4D61716820599F33008C8622 /* AppDelegate.swift in Sources */,
 				4D6171A1205AC77C008C8622 /* FactWebServiceProtocol.swift in Sources */,
+				49D1FD8F20657E02003247A7 /* FactMapper.swift in Sources */,
 				4D61719C205AC4CA008C8622 /* JSON.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -425,6 +462,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D61717D20599F33008C8622 /* ChuckNorrisFactsTests.swift in Sources */,
+				49B04F4F20658843006CDCCA /* FactCategoryTests.swift in Sources */,
+				49D1FD9220657F9F003247A7 /* FactMapperTests.swift in Sources */,
+				49D1FD8C20655474003247A7 /* FactModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

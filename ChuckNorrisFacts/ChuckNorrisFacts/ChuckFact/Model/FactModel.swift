@@ -19,7 +19,7 @@ class FactModel {
         
         message = fact.message
         
-        if let categories = fact.categories, let category = categories.categories.first {
+        if let categories = fact.categories, let category = categories.categories?.first {
             self.category = category
             self.categoryBackground = .blue
         } else {
