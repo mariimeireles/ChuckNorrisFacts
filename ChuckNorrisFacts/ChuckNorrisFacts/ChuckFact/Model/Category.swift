@@ -13,7 +13,6 @@ struct Category {
     let categories: [String]
     
     init?(json: JSON) {
-        
         guard let categories = json["category"] as? [String] else { return nil }
         self.categories = categories
     }

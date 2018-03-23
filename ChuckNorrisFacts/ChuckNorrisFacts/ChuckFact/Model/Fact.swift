@@ -10,15 +10,16 @@ import Foundation
 
 struct Fact {
     
-    let category: Category?
+    let categories: Category?
     let message: String
+    
     
     init(json: JSON) {
         
         let category = Category(json: json)
         let message = json["value"] as? String
         
-        self.category = category
+        self.categories = category
         self.message = message!
     }
     
