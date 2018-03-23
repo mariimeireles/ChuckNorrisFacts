@@ -10,10 +10,14 @@ import Foundation
 
 struct Category {
     
-    let categories: [String]
+    let categories: [String]?
+    
+}
+
+extension Category {
     
     init?(json: JSON) {
-        guard let categories = json["category"] as? [String] else { return nil }
+        guard let categories = json["category"] as? [String]? else { return nil }
         self.categories = categories
     }
     
