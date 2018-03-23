@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		495B0C4520654C6D0098213F /* RxAlamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 495B0C4420654C6D0098213F /* RxAlamofire.framework */; };
+		495B0C4A20654C900098213F /* RxAlamofire.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 495B0C4420654C6D0098213F /* RxAlamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		495B0C4E20654D050098213F /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 495B0C4D20654D050098213F /* Alamofire.framework */; };
+		495B0C4F20654D180098213F /* Alamofire.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 495B0C4D20654D050098213F /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		495B0C5220654D5F0098213F /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 495B0C4820654C800098213F /* Quick.framework */; };
+		495B0C5320654D610098213F /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 495B0C4620654C7A0098213F /* Nimble.framework */; };
+		495B0C5520654D740098213F /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 495B0C4820654C800098213F /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		495B0C5620654D770098213F /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 495B0C4620654C7A0098213F /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		49AF5E862065466D00B503CC /* FactModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AF5E852065466D00B503CC /* FactModel.swift */; };
 		4D61716820599F33008C8622 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D61716720599F33008C8622 /* AppDelegate.swift */; };
 		4D61716A20599F33008C8622 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D61716920599F33008C8622 /* ViewController.swift */; };
 		4D61716D20599F33008C8622 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D61716B20599F33008C8622 /* Main.storyboard */; };
@@ -44,12 +53,25 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		495B0C5420654D6B0098213F /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				495B0C5620654D770098213F /* Nimble.framework in CopyFiles */,
+				495B0C5520654D740098213F /* Quick.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4D6171A9205ACB1B008C8622 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				495B0C4F20654D180098213F /* Alamofire.framework in CopyFiles */,
+				495B0C4A20654C900098213F /* RxAlamofire.framework in CopyFiles */,
 				4D6171AC205ACB3D008C8622 /* RxBlocking.framework in CopyFiles */,
 				4D6171AB205ACB37008C8622 /* RxCocoa.framework in CopyFiles */,
 				4D6171AA205ACB31008C8622 /* RxSwift.framework in CopyFiles */,
@@ -59,6 +81,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		495B0C4420654C6D0098213F /* RxAlamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxAlamofire.framework; path = Carthage/Build/iOS/RxAlamofire.framework; sourceTree = "<group>"; };
+		495B0C4620654C7A0098213F /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
+		495B0C4820654C800098213F /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
+		495B0C4D20654D050098213F /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		49AF5E852065466D00B503CC /* FactModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactModel.swift; sourceTree = "<group>"; };
 		4D61716420599F33008C8622 /* ChuckNorrisFacts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChuckNorrisFacts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D61716720599F33008C8622 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4D61716920599F33008C8622 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -89,6 +116,8 @@
 				4D6171A4205ACAF2008C8622 /* RxBlocking.framework in Frameworks */,
 				4D6171A6205ACAF4008C8622 /* RxCocoa.framework in Frameworks */,
 				4D6171A8205ACAFC008C8622 /* RxSwift.framework in Frameworks */,
+				495B0C4E20654D050098213F /* Alamofire.framework in Frameworks */,
+				495B0C4520654C6D0098213F /* RxAlamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,6 +125,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				495B0C5220654D5F0098213F /* Quick.framework in Frameworks */,
+				495B0C5320654D610098213F /* Nimble.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -191,6 +222,7 @@
 			isa = PBXGroup;
 			children = (
 				4D617198205AC366008C8622 /* Fact.swift */,
+				49AF5E852065466D00B503CC /* FactModel.swift */,
 				4D61719D205AC5FC008C8622 /* Category.swift */,
 			);
 			path = Model;
@@ -208,6 +240,10 @@
 		4D6171A2205ACAF1008C8622 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				495B0C4D20654D050098213F /* Alamofire.framework */,
+				495B0C4820654C800098213F /* Quick.framework */,
+				495B0C4620654C7A0098213F /* Nimble.framework */,
+				495B0C4420654C6D0098213F /* RxAlamofire.framework */,
 				4D6171A7205ACAFC008C8622 /* RxSwift.framework */,
 				4D6171A5205ACAF4008C8622 /* RxCocoa.framework */,
 				4D6171A3205ACAF2008C8622 /* RxBlocking.framework */,
@@ -244,6 +280,7 @@
 				4D61717420599F33008C8622 /* Sources */,
 				4D61717520599F33008C8622 /* Frameworks */,
 				4D61717620599F33008C8622 /* Resources */,
+				495B0C5420654D6B0098213F /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -356,6 +393,8 @@
 				"$(SRCROOT)/Carthage/Build/iOS/RxBlocking.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxAlamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
 			);
 			name = "Carthage Script";
 			outputPaths = (
@@ -373,6 +412,7 @@
 			files = (
 				4D61716A20599F33008C8622 /* ViewController.swift in Sources */,
 				4D61719E205AC5FC008C8622 /* Category.swift in Sources */,
+				49AF5E862065466D00B503CC /* FactModel.swift in Sources */,
 				4D617199205AC366008C8622 /* Fact.swift in Sources */,
 				4D61716820599F33008C8622 /* AppDelegate.swift in Sources */,
 				4D6171A1205AC77C008C8622 /* FactWebServiceProtocol.swift in Sources */,
@@ -583,6 +623,10 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GQU3QL4RG3;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = ChuckNorrisFactsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Stone.ChuckNorrisFactsTests;
@@ -600,6 +644,10 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GQU3QL4RG3;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = ChuckNorrisFactsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Stone.ChuckNorrisFactsTests;
