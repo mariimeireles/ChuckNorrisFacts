@@ -10,7 +10,7 @@
 import Nimble
 import XCTest
 
-final class FactCategoryTests: XCTestCase {
+class FactCategoryTests: XCTestCase {
     
     private var validJSON: JSON {
         return [
@@ -32,12 +32,12 @@ final class FactCategoryTests: XCTestCase {
         ]
     }
     
-    func test_shouldReturn_Nil_When_InvalidJSONIsUsed() {
+    func test_shouldReturn_nil_whenInvalidJSON() {
         let categoryNil = Category(json: invalidJSON)
         expect(categoryNil).to(beNil())
     }
     
-    func test_shouldReturn_ValidObject_When_ValidJSONIsUsed() {
+    func test_shouldReturn_validObject_whenValidJSON() {
         let category = Category(json: validJSON)
         expect(category).toNot(beNil())
     }

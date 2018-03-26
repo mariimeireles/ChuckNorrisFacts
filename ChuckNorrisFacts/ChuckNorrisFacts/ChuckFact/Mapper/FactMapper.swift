@@ -10,18 +10,14 @@ import Foundation
 
 class FactMapper {
     
-    
     enum FactError: Error {
         case invalidJSON
     }
     
     func map(_ json: JSON) throws -> [Fact] {
-        
-        guard let jsonList = json["result"] as? [JSON] else {
-            throw FactError.invalidJSON
-        }
+        guard let jsonList = json["result"] as? [JSON] else { throw FactError.invalidJSON }
         var facts: [Fact] = []
-        
+
         for json in jsonList {
             let fact = Fact(json: json)
             facts.append(fact)
