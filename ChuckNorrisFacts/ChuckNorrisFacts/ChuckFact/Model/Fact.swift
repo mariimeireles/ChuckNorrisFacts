@@ -9,10 +9,8 @@
 import Foundation
 
 struct Fact {
-    
     let categories: Category?
     let message: String
-    
 }
 
 extension Fact {

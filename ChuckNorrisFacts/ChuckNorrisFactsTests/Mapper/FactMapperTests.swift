@@ -10,7 +10,7 @@
 import Nimble
 import XCTest
 
-final class FactMapperTests: XCTestCase {
+class FactMapperTests: XCTestCase {
     
     private var mapper: FactMapper!
     private var validJSON: JSON {
@@ -45,15 +45,15 @@ final class FactMapperTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
-        mapper = FactMapper()
+        self.mapper = FactMapper()
     }
     
     override func tearDown() {
-        mapper = nil
+        self.mapper = nil
         super.tearDown()
     }
     
-    func test_shouldThrow_ErrorWhen_invalidJSON() {
+    func test_should_throwError_whenInvalidJSON() {
         expect {
             try self.mapper.map(self.invalidJSON)
             }.to(throwError { (error: FactMapper.FactError) in
@@ -61,7 +61,7 @@ final class FactMapperTests: XCTestCase {
             })
     }
     
-    func test_shouldNot_ThrowError_When_ValidJSONIsUsed() {
+    func test_shouldNot_throwError_whenValidJSON() {
         expect {
             try self.mapper.map(self.validJSON)
             }.toNot(throwError())
