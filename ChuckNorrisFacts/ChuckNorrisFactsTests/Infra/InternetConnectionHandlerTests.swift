@@ -46,7 +46,7 @@ class InternetConnectionHandlerTests: XCTestCase {
         super.tearDown()
     }
     
-    func test_ShouldThrow_TheSameErrorPassed_When_IsNotConnectionError() {
+    func test_shouldThrow_theSameErrorPassed_when_noConnectionError() {
         let internalServerError = ServiceError.internalServer
         expect {
             try self.internetConnectionHandler.verifyConnection(internalServerError)
