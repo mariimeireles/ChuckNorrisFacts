@@ -12,22 +12,22 @@ import XCTest
 
 class FactURLMakerTests: XCTestCase {
     
-    private var urlMaker: FactURLMaker!
+    private var factWebService: FactWebService!
     
     override func setUp() {
         super.setUp()
-        self.urlMaker = FactURLMaker()
+        self.factWebService = FactWebService()
     }
     
     override func tearDown() {
-        self.urlMaker = nil
+        self.factWebService = nil
         super.tearDown()
     }
     
     func test_should_encodeURL() {
         let baseUrl = "https://api.chucknorris.io/jokes/search?query="
         let term = "black pánts"
-        let url = self.urlMaker.makeURL(from: baseUrl, with: term)
+        let url = self.factWebService.makeURL(from: baseUrl, with: term)
         let encodedURL = "https://api.chucknorris.io/jokes/search?query=black%20p%C3%A1nts"
         expect(url).to(equal(encodedURL))
     }
@@ -35,7 +35,7 @@ class FactURLMakerTests: XCTestCase {
     func test_should_concatURL() {
         let baseUrl = "https://api.chucknorris.io/jokes/search?query="
         let term = "cale"
-        let url = self.urlMaker.makeURL(from: baseUrl, with: term)
+        let url = self.factWebService.makeURL(from: baseUrl, with: term)
         expect(url).to(equal(baseUrl + term))
     }
 

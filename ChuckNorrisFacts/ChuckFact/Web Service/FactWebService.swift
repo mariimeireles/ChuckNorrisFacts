@@ -21,23 +21,28 @@ class FactWebService: FactWebServiceProtocol {
     }
     
     func getFacts(_ term: String) -> Observable<[Fact]> {
-        let urlMaker = FactURLMaker()
-        let url = urlMaker.makeURL(from: self.baseUrl, with: term)
+        let url = self.makeURL(from: self.baseUrl, with: term)
         let infraHandler = InfraHandler()
         let internetConnectionHandler = InternetConnectionHandler()
         
-        return RxAlamofire.request(.get, url)
-            .responseData()
+        return RxAlamofire.requestJSON(.get, url)
+            .debug()
             .do(onNext: { (response, data) in
                 try infraHandler.verifySuccessStatusCode(response)
             })
             .do(onError: { error in
                 try internetConnectionHandler.verifyConnection(error)
             })
-            .map({ [unowned self] (_, data) -> [Fact] in
-                let json = try infraHandler.mapDataToJSON(data)
+            .map({ (response, result) -> [Fact] in
+                guard let json = result as? JSON else { throw ServiceError.JSONParse(.result) }
                 return try self.mapJSONToFacts(json)
             })
+    }
+    
+    func makeURL(from baseUrl: String, with term: String) -> String {
+        let url = "\(baseUrl)\(term)"
+        let encodedURL = url.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
+        return encodedURL ?? url
     }
 
     private func mapJSONToFacts(_ json: JSON) throws -> [Fact] {

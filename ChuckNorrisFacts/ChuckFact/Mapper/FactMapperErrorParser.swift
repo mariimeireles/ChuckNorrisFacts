@@ -11,7 +11,6 @@ import Foundation
 class FactMapperErrorParser {
     
     func parseError(_ error: Error) -> ServiceError {
-        let modelParseError = JSONParseError.model
-        return ServiceError.JSONParse(modelParseError)
+        return ServiceError.JSONParse(.model)
     }
 }

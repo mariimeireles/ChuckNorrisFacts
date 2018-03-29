@@ -20,8 +20,8 @@ class InfraHandler {
     private func getError(for statusCode: Int) -> ServiceError {
         switch statusCode {
         case 400...499:
-            let badRequest = BadRequestError(code: statusCode)
-            return .badRequest(badRequest)
+            let restError = RestError(code: statusCode)
+            return .REST(restError)
         default:
             return .internalServer
         }

@@ -12,3 +12,4 @@ enum JSONParseError {
     case result
     case model
 }
+

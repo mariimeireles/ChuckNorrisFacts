@@ -18,7 +18,7 @@
 		495B0C5620654D770098213F /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 495B0C4620654C7A0098213F /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		49AF5E862065466D00B503CC /* FactModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AF5E852065466D00B503CC /* FactModel.swift */; };
 		49B04F4F20658843006CDCCA /* FactCategoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B04F4E20658843006CDCCA /* FactCategoryTests.swift */; };
-		49B04F5220659525006CDCCA /* BadRequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B04F5120659525006CDCCA /* BadRequestError.swift */; };
+		49B04F5220659525006CDCCA /* RestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B04F5120659525006CDCCA /* RestError.swift */; };
 		49B04F54206595F9006CDCCA /* InfraHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B04F53206595F9006CDCCA /* InfraHandler.swift */; };
 		49B04F5720690997006CDCCA /* InternetConnectionError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B04F5620690997006CDCCA /* InternetConnectionError.swift */; };
 		49B04F59206909EC006CDCCA /* FactWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B04F58206909EC006CDCCA /* FactWebService.swift */; };
@@ -26,7 +26,6 @@
 		49B04F5D20690CF4006CDCCA /* ServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B04F5C20690CF4006CDCCA /* ServiceError.swift */; };
 		49B04F5F20690D98006CDCCA /* InternetConnectionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B04F5E20690D98006CDCCA /* InternetConnectionHandler.swift */; };
 		49B04F6120690E72006CDCCA /* FactMapperErrorParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B04F6020690E72006CDCCA /* FactMapperErrorParser.swift */; };
-		49B04F63206917A2006CDCCA /* FactURLMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B04F62206917A2006CDCCA /* FactURLMaker.swift */; };
 		49B04F6620691B63006CDCCA /* FactURLMakerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B04F6520691B63006CDCCA /* FactURLMakerTests.swift */; };
 		49B04F6820691E2A006CDCCA /* FactMapperErrorParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B04F6720691E2A006CDCCA /* FactMapperErrorParserTests.swift */; };
 		49B04F6B20692428006CDCCA /* InfraHandlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B04F6A20692428006CDCCA /* InfraHandlerTests.swift */; };
@@ -105,7 +104,7 @@
 		495B0C4D20654D050098213F /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		49AF5E852065466D00B503CC /* FactModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactModel.swift; sourceTree = "<group>"; };
 		49B04F4E20658843006CDCCA /* FactCategoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactCategoryTests.swift; sourceTree = "<group>"; };
-		49B04F5120659525006CDCCA /* BadRequestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadRequestError.swift; sourceTree = "<group>"; };
+		49B04F5120659525006CDCCA /* RestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestError.swift; sourceTree = "<group>"; };
 		49B04F53206595F9006CDCCA /* InfraHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfraHandler.swift; sourceTree = "<group>"; };
 		49B04F5620690997006CDCCA /* InternetConnectionError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetConnectionError.swift; sourceTree = "<group>"; };
 		49B04F58206909EC006CDCCA /* FactWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactWebService.swift; sourceTree = "<group>"; };
@@ -113,7 +112,6 @@
 		49B04F5C20690CF4006CDCCA /* ServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceError.swift; sourceTree = "<group>"; };
 		49B04F5E20690D98006CDCCA /* InternetConnectionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetConnectionHandler.swift; sourceTree = "<group>"; };
 		49B04F6020690E72006CDCCA /* FactMapperErrorParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactMapperErrorParser.swift; sourceTree = "<group>"; };
-		49B04F62206917A2006CDCCA /* FactURLMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactURLMaker.swift; sourceTree = "<group>"; };
 		49B04F6520691B63006CDCCA /* FactURLMakerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactURLMakerTests.swift; sourceTree = "<group>"; };
 		49B04F6720691E2A006CDCCA /* FactMapperErrorParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactMapperErrorParserTests.swift; sourceTree = "<group>"; };
 		49B04F6A20692428006CDCCA /* InfraHandlerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfraHandlerTests.swift; sourceTree = "<group>"; };
@@ -187,7 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				49B04F552069098D006CDCCA /* Internet */,
-				49B04F5120659525006CDCCA /* BadRequestError.swift */,
+				49B04F5120659525006CDCCA /* RestError.swift */,
 				49B04F53206595F9006CDCCA /* InfraHandler.swift */,
 				49B04F5A20690CB2006CDCCA /* JSONParseError.swift */,
 				49B04F5C20690CF4006CDCCA /* ServiceError.swift */,
@@ -338,7 +336,6 @@
 			children = (
 				4D61719B205AC4CA008C8622 /* JSON.swift */,
 				4D6171A0205AC77C008C8622 /* FactWebServiceProtocol.swift */,
-				49B04F62206917A2006CDCCA /* FactURLMaker.swift */,
 				49B04F58206909EC006CDCCA /* FactWebService.swift */,
 			);
 			path = "Web Service";
@@ -532,8 +529,7 @@
 				49B04F5B20690CB2006CDCCA /* JSONParseError.swift in Sources */,
 				4D61719C205AC4CA008C8622 /* JSON.swift in Sources */,
 				49B04F5D20690CF4006CDCCA /* ServiceError.swift in Sources */,
-				49B04F63206917A2006CDCCA /* FactURLMaker.swift in Sources */,
-				49B04F5220659525006CDCCA /* BadRequestError.swift in Sources */,
+				49B04F5220659525006CDCCA /* RestError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
