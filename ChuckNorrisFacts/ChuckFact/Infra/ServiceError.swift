@@ -10,7 +10,7 @@ import Foundation
 
 enum ServiceError: Error {
     case JSONParse(JSONParseError)
-    case badRequest(BadRequestError)
+    case REST(RestError)
     case connection(InternetConnectionError)
     case `internalServer`
 }
@@ -21,7 +21,7 @@ extension ServiceError: Equatable {
         switch (lhs, rhs) {
         case (let .JSONParse(error), let .JSONParse(error2)):
             return error == error2
-        case (let .badRequest(error), let .badRequest(error2)):
+        case (let .REST(error), let .REST(error2)):
             return error == error2
         case (let .connection(error), let .connection(error2)):
             return error == error2

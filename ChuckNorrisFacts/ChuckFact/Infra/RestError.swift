@@ -1,5 +1,5 @@
 //
-//  BadRequestError.swift
+//  RestError.swift
 //  ChuckNorrisFacts
 //
 //  Created by Mariana Meireles on 23/03/18.
@@ -8,9 +8,10 @@
 
 import Foundation
 
-enum BadRequestError {
+enum RestError {
     case notFound
     case unprocessableEntity
+    case serverError
     case other
     
     init(code: Int) {
@@ -19,6 +20,8 @@ enum BadRequestError {
             self = .notFound
         case 422:
             self = .unprocessableEntity
+        case 500...513:
+            self = .serverError
         default:
             self = .other
         }
