@@ -57,12 +57,12 @@ class InfraHandlerTests: XCTestCase {
         verify(response: response, equalTo: .other)
     }
     
-    func test_shouldThrow_internalServerError_when_statusCodeIs_500() {
-        let response = getResponseFor(statusCode: 500)
+    func test_shouldThrow_internalServerError_when_statusCodeIs_599() {
+        let response = getResponseFor(statusCode: 599)
         expect {
             try self.infraHandler.verifySuccessStatusCode(response)
             }.to(throwError { (error: ServiceError) in
-                expect(error).to(equal(ServiceError.internalServer))
+                expect(error).to(equal(ServiceError.internalServerError))
             })
     }
     

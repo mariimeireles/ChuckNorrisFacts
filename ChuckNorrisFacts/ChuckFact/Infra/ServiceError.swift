@@ -12,7 +12,7 @@ enum ServiceError: Error {
     case JSONParse(JSONParseError)
     case REST(RestError)
     case connection(InternetConnectionError)
-    case `internalServer`
+    case internalServerError
 }
 
 extension ServiceError: Equatable {
@@ -25,7 +25,7 @@ extension ServiceError: Equatable {
             return error == error2
         case (let .connection(error), let .connection(error2)):
             return error == error2
-        case (.internalServer, .internalServer):
+        case (.internalServerError, .internalServerError):
             return true
         default:
             return false
