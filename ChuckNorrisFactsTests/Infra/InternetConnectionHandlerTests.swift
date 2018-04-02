@@ -47,11 +47,11 @@ class InternetConnectionHandlerTests: XCTestCase {
     }
     
     func test_shouldThrow_theSameErrorPassed_when_noConnectionError() {
-        let internalServerError = ServiceError.internalServer
+        let internalServerError = ServiceError.internalServerError
         expect {
             try self.internetConnectionHandler.verifyConnection(internalServerError)
             }.to(throwError(closure: { (error: ServiceError) in
-                expect(error).to(equal(ServiceError.internalServer))
+                expect(error).to(equal(ServiceError.internalServerError))
             }))
     }
     
