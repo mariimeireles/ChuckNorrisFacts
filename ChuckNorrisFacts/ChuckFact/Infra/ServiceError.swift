@@ -10,7 +10,7 @@ import Foundation
 
 enum ServiceError: Error {
     case JSONParse(JSONParseError)
-    case REST(RestError)
+    case REST(RESTError)
     case connection(InternetConnectionError)
     case internalServerError
 }

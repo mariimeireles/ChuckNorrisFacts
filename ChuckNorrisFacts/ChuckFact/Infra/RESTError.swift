@@ -1,5 +1,5 @@
 //
-//  RestError.swift
+//  RESTError.swift
 //  ChuckNorrisFacts
 //
 //  Created by Mariana Meireles on 23/03/18.
@@ -8,7 +8,8 @@
 
 import Foundation
 
-enum RestError {
+enum RESTError {
+    
     case notFound
     case unprocessableEntity
     case serverError

@@ -11,7 +11,6 @@ import Foundation
 struct Category {
     
     let categories: [String]?
-    
 }
 
 extension Category {

@@ -23,6 +23,14 @@ class FactModelTests: XCTestCase {
         return Fact(categories: Category(categories: ["explicit"]), message: "Chuck Norris once challenged Lance Armstrong in a \"Who has more testicles?\" contest. Chuck Norris won by 5.")
     }
     
+    private var factWithMoreThan50Characters: Fact {
+        return Fact (categories: nil, message: "Chuck Norris roundhouse kicks don't really kill people. They wipe out their entire existence from the space-time continuum.")
+    }
+    
+    private var factWithLessThan50Characters: Fact {
+        return Fact (categories: nil, message: "Chuck Norris can stop the space-time continum")
+    }
+    
     override func setUp() {
         super.setUp()
         modelWithoutCategory = FactModel(fact: factWithoutCategory)
@@ -45,6 +53,16 @@ class FactModelTests: XCTestCase {
     
     func test_categoryBackgroundShouldBe_blue_whenHaveCategory() {
         expect(self.modelWithCategory.categoryBackground).to(equal(UIColor.blue))
+    }
+    
+    func test_messageFont_ShouldHave_SizeEqualTo_14_When_FactHaveMoreThan50Characters() {
+        let model = FactModel(fact: factWithMoreThan50Characters)
+        expect(model.messageFont.pointSize).to(equal(14))
+    }
+    
+    func test_messageFont_ShouldHave_SizeEqualTo_16_When_FactHaveLessThan50Characters() {
+        let model = FactModel(fact: factWithLessThan50Characters)
+        expect(model.messageFont.pointSize).to(equal(16))
     }
 
 }

@@ -14,7 +14,7 @@ class FactCategoryTests: XCTestCase {
     
     private var validJSON: JSON {
         return [
-            "category": nil,
+            "category": ["Money"],
             "icon_url": "https://assets.chucknorris.host/img/avatar/chuck-norris.png",
             "id": "SvIuvs7cTaCa_eDYPM2KTg",
             "url": "https://api.chucknorris.io/jokes/SvIuvs7cTaCa_eDYPM2KTg",
@@ -24,7 +24,7 @@ class FactCategoryTests: XCTestCase {
     
     private var invalidJSON: JSON {
         return [
-            "category": 1,
+            "category": "Car",
             "icon_url": "https://assets.chucknorris.host/img/avatar/chuck-norris.png",
             "id": "tng5xzi5t9syvqaubukycw",
             "url": "https://api.chucknorris.io/jokes/tng5xzi5t9syvqaubukycw",
