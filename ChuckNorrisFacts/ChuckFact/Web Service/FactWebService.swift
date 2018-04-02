@@ -33,7 +33,7 @@ class FactWebService: FactWebServiceProtocol {
             .do(onError: { error in
                 try internetConnectionHandler.verifyConnection(error)
             })
-            .map({ (response, result) -> [Fact] in
+            .map({ [unowned self] (response, result) -> [Fact] in
                 guard let json = result as? JSON else { throw ServiceError.JSONParse(.result) }
                 return try self.mapJSONToFacts(json)
             })

@@ -19,7 +19,7 @@ class InfraHandlerTests: XCTestCase {
         return response
     }
     
-    private func verify(response: HTTPURLResponse, equalTo expectedError: RestError) {
+    private func verify(response: HTTPURLResponse, equalTo expectedError: RESTError) {
         expect {
             try self.infraHandler.verifySuccessStatusCode(response)
             }.to(throwError { (error: ServiceError) in
