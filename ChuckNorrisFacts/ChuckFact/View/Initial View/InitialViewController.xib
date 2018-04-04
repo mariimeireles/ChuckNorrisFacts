@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InitialViewController" customModule="ChuckNorrisFacts" customModuleProvider="target">
+            <connections>
+                <outlet property="activityIndicator" destination="BYp-31-Ztj" id="BiF-2P-VnL"/>
+                <outlet property="loadingView" destination="bOi-NH-nC8" id="YDb-ag-ilq"/>
+                <outlet property="searchButton" destination="9rP-c1-lWO" id="3sR-wF-5QK"/>
+                <outlet property="textField" destination="ltc-Gi-WfQ" id="9oz-yv-2dc"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search for Chuck Norris facts" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ltc-Gi-WfQ">
+                    <rect key="frame" x="19" y="60" width="337.5" height="30"/>
+                    <accessibility key="accessibilityConfiguration" identifier="FactTextField"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9rP-c1-lWO">
+                    <rect key="frame" x="112.5" y="108" width="150" height="30"/>
+                    <color key="backgroundColor" red="0.0017316030307565899" green="0.2512987022730675" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <accessibility key="accessibilityConfiguration" identifier="SearchButton"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="Be2-eJ-PrK"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                    <state key="normal" title="Search">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bOi-NH-nC8">
+                    <rect key="frame" x="122.5" y="70" width="130" height="130"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="130" id="Ybz-mW-UAg"/>
+                        <constraint firstAttribute="height" constant="130" id="lma-wQ-3RF"/>
+                    </constraints>
+                </view>
+                <activityIndicatorView opaque="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="BYp-31-Ztj">
+                    <rect key="frame" x="169" y="117" width="37" height="37"/>
+                </activityIndicatorView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="bOi-NH-nC8" firstAttribute="top" secondItem="ltc-Gi-WfQ" secondAttribute="bottom" constant="-20" id="3XF-Tn-x5d"/>
+                <constraint firstItem="ltc-Gi-WfQ" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.9" id="3ha-Pb-hg5"/>
+                <constraint firstItem="9rP-c1-lWO" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="5a7-GI-Azu"/>
+                <constraint firstItem="9rP-c1-lWO" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.4" id="Jlr-2A-7Jo"/>
+                <constraint firstItem="BYp-31-Ztj" firstAttribute="centerX" secondItem="bOi-NH-nC8" secondAttribute="centerX" id="KSF-g7-XuE"/>
+                <constraint firstItem="ltc-Gi-WfQ" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Ose-3Z-fAk"/>
+                <constraint firstItem="9rP-c1-lWO" firstAttribute="top" secondItem="ltc-Gi-WfQ" secondAttribute="bottom" multiplier="1.2" id="PKd-zW-bAw"/>
+                <constraint firstItem="bOi-NH-nC8" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Yf5-LY-O2L"/>
+                <constraint firstItem="ltc-Gi-WfQ" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" multiplier="3" id="aaT-7b-aDK"/>
+                <constraint firstItem="BYp-31-Ztj" firstAttribute="centerY" secondItem="bOi-NH-nC8" secondAttribute="centerY" id="hlW-og-tbt"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+        </view>
+    </objects>
+</document>
