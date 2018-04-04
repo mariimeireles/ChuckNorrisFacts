@@ -16,11 +16,7 @@ class FactWebServiceMock: FactWebServiceProtocol {
     private var result: Data = Data()
     private var isConnectionError = false
     var expectedSuccessWithFacts: [FactModel] {
-        let result = facts.map { FactModel(fact: $0) }
-        print("---------RESULT \(result)")
-        print("---------END")
-        return result
-//        return facts.map { FactModel(fact: $0) }
+        return facts.map { FactModel(fact: $0) }
     }
     var expectedSuccessWithEmptyFacts: [FactModel] {
         return []
